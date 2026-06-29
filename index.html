@@ -10,7 +10,9 @@ h1 { color: #1a1a2e; }
 .form { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
 input, button { padding: 10px; margin: 5px 0; width: 100%; box-sizing: border-box; }
 button { background: #1a1a2e; color: white; border: none; cursor: pointer; }
-.consent { font-size: 12px; color: #666; margin-top: 10px; }
+.checkbox-group { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; }
+.checkbox-group input[type="checkbox"] { width: auto; margin-top: 3px; flex-shrink: 0; }
+.consent { font-size: 12px; color: #666; }
 small { font-size: 11px; color: #888; }
 </style>
 </head>
@@ -28,18 +30,24 @@ small { font-size: 11px; color: #888; }
 <label>Email</label>
 <input type="email" placeholder="john@example.com" required>
 
-<label>Phone Number (for SMS updates)</label>
-<input type="tel" placeholder="+1 (555) 123-4567" required>
+<label>Phone Number (optional)</label>
+<input type="tel" placeholder="+1 (555) 123-4567">
+
+<div class="checkbox-group">
+<input type="checkbox" id="sms-consent">
+<label for="sms-consent" class="consent">
+<strong>SMS Consent (optional):</strong> By checking this box and providing your phone number, 
+you agree to receive text messages from Economy Moving Service LLC, including 
+<strong>customer care inquiries, account notifications, delivery/pickup updates, and marketing/promotional offers.</strong> 
+Message frequency varies. Message & data rates may apply. Reply HELP for help or STOP to opt out at any time.
+</label>
+</div>
+
+<br>
+<strong style="font-size: 12px;">Your mobile information will not be sold or shared with third parties for promotional or marketing purposes.</strong>
 
 <button type="submit">Submit</button>
 </form>
-<p class="consent">
-By providing your phone number, you agree to receive text messages from Economy Moving Service LLC. 
-Message frequency varies. Message & data rates may apply. 
-Reply HELP for help or STOP to opt out at any time.
-<br><br>
-<strong>Your mobile information will not be sold or shared with third parties for promotional or marketing purposes.</strong>
-</p>
 </div>
 
 <hr>
@@ -47,14 +55,14 @@ Reply HELP for help or STOP to opt out at any time.
 <p>Economy Moving Service LLC ("we," "us," or "our") is committed to protecting your privacy.</p>
 <ul>
 <li><strong>Information Collection:</strong> We collect your name, email, and phone number only when you voluntarily submit them through our contact form.</li>
-<li><strong>Use of Information:</strong> Your information is used solely to communicate with you regarding our moving and logistics services, including SMS notifications about your bookings, estimates, and service updates.</li>
+<li><strong>Use of Information:</strong> Your information is used solely to communicate with you regarding our services, including SMS notifications about customer care, account updates, delivery/pickup status, and promotional offers.</li>
 <li><strong>No Sale of Data:</strong> We do NOT sell, rent, or share your mobile information or personal data with third parties for promotional or marketing purposes.</li>
-<li><strong>SMS Communications:</strong> By providing your phone number, you consent to receive SMS messages from us. You can opt out at any time by replying STOP.</li>
+<li><strong>SMS Communications:</strong> By providing your phone number and checking the SMS consent box, you consent to receive SMS messages from us including customer care, account notifications, delivery updates, and marketing offers. You can opt out at any time by replying STOP.</li>
 <li><strong>Data Security:</strong> We implement reasonable security measures to protect your personal information.</li>
 </ul>
 
 <h3>Terms of Service</h3>
-<p>By using our SMS communication service, you agree to receive messages related to your bookings, estimates, and service updates. Standard message and data rates may apply. Reply STOP to unsubscribe at any time.</p>
+<p>By using our SMS communication service, you may receive messages related to customer care, account notifications, delivery/pickup updates, and promotional offers. Standard message and data rates may apply. Reply STOP to unsubscribe at any time.</p>
 
 <small>© 2026 Economy Moving Service LLC. All rights reserved.</small>
 </body>
